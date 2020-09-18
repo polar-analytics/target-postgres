@@ -5,7 +5,7 @@ import re
 
 from jsonschema import Draft4Validator
 from jsonschema.exceptions import SchemaError
-from target_postgres.exceptions import JSONSchemaError
+from singer_target_postgres.exceptions import JSONSchemaError
 
 NULL = 'null'
 OBJECT = 'object'

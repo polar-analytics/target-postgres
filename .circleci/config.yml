@@ -121,7 +121,7 @@ jobs:
       - *restore__cache
 
       - run:
-          name: Install target-postgres
+          name: Install singer-target-postgres
           command: |
             python -m venv venv/target-postgres
             source venv/target-postgres/bin/activate
@@ -129,7 +129,7 @@ jobs:
             deactivate
 
       - run:
-          name: Install older versions of target-postgres for migration testing
+          name: Install older versions of singer-target-postgres for migration testing
           command: ./tests/migrations/scripts/install_schema_versions.sh
 
       - run:

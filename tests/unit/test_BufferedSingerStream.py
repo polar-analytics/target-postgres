@@ -3,8 +3,8 @@ from copy import deepcopy
 
 import pytest
 
-from target_postgres import singer
-from target_postgres.singer_stream import BufferedSingerStream, SingerStreamError, RAW_LINE_SIZE
+from singer_target_postgres import singer
+from singer_target_postgres.singer_stream import BufferedSingerStream, SingerStreamError, RAW_LINE_SIZE
 
 from utils.fixtures import CatStream, InvalidCatStream, CATS_SCHEMA
 

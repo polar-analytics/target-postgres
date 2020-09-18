@@ -8,8 +8,8 @@ import psycopg2.extras
 import pytest
 
 from utils.fixtures import CatStream, CONFIG, db_cleanup, MultiTypeStream, NestedStream, TEST_DB, TypeChangeStream, DogStream
-from target_postgres import json_schema, main, postgres, singer, singer_stream
-from target_postgres.target_tools import TargetError
+from singer_target_postgres import json_schema, main, postgres, singer, singer_stream
+from singer_target_postgres.target_tools import TargetError
 
 
 ## TODO: create and test more fake streams

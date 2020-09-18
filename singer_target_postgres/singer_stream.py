@@ -6,8 +6,8 @@ import arrow
 from jsonschema import Draft4Validator, FormatChecker
 from jsonschema.exceptions import ValidationError
 
-from target_postgres import json_schema, singer
-from target_postgres.exceptions import SingerStreamError
+from singer_target_postgres import json_schema, singer
+from singer_target_postgres.exceptions import SingerStreamError
 
 
 SINGER_RECEIVED_AT = '_sdc_received_at'

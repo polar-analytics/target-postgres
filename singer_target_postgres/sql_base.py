@@ -18,8 +18,8 @@ import time
 import singer
 import singer.metrics as metrics
 
-from target_postgres import denest
-from target_postgres import json_schema
+from singer_target_postgres import denest
+from singer_target_postgres import json_schema
 
 SEPARATOR = '__'
 CURRENT_SCHEMA_VERSION = 2

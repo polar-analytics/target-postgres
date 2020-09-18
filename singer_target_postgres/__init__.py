@@ -1,8 +1,8 @@
 from singer import utils
 import psycopg2
 
-from target_postgres.postgres import MillisLoggingConnection, PostgresTarget
-from target_postgres import target_tools
+from singer_target_postgres.postgres import MillisLoggingConnection, PostgresTarget
+from singer_target_postgres import target_tools
 
 REQUIRED_CONFIG_KEYS = [
     'postgres_database'

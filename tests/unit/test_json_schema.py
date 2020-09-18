@@ -3,7 +3,7 @@ import decimal
 
 import pytest
 
-from target_postgres import json_schema
+from singer_target_postgres import json_schema
 from utils.fixtures import CATS_SCHEMA
 
 

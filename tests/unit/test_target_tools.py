@@ -4,9 +4,9 @@ import json
 from unittest.mock import patch
 import pytest
 
-from target_postgres import singer_stream
-from target_postgres import target_tools
-from target_postgres.sql_base import SQLInterface
+from singer_target_postgres import singer_stream
+from singer_target_postgres import target_tools
+from singer_target_postgres.sql_base import SQLInterface
 
 from utils.fixtures import CONFIG, CatStream, ListStream, InvalidCatStream, DogStream
 

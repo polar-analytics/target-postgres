@@ -12,9 +12,9 @@ import arrow
 from psycopg2 import sql
 from psycopg2.extras import LoggingConnection, LoggingCursor
 
-from target_postgres import json_schema, singer
-from target_postgres.exceptions import PostgresError
-from target_postgres.sql_base import SEPARATOR, SQLInterface
+from singer_target_postgres import json_schema, singer
+from singer_target_postgres.exceptions import PostgresError
+from singer_target_postgres.sql_base import SEPARATOR, SQLInterface
 
 
 RESERVED_NULL_DEFAULT = 'NULL'

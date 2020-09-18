@@ -9,7 +9,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name='singer-target-postgres',
+    name='singer-singer-target-postgres',
     url='https://github.com/datamill-co/target-postgres',
     author='datamill',
     version="0.2.4",
@@ -17,7 +17,7 @@ setup(
     long_description=long_description,
     long_description_content_type='text/markdown',
     classifiers=['Programming Language :: Python :: 3 :: Only'],
-    py_modules=['target_postgres'],
+    py_modules=['singer_target_postgres'],
     install_requires=[
         'arrow==0.15.5',
         'psycopg2==2.8.5',
@@ -34,7 +34,7 @@ setup(
         ]},
     entry_points='''
       [console_scripts]
-      target-postgres=target_postgres:cli
+      singer-target-postgres=singer_target_postgres:cli
     ''',
     packages=find_packages()
 )

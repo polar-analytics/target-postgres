@@ -9,10 +9,10 @@ import decimal
 import singer
 from singer import utils, metadata, metrics
 
-from target_postgres import json_schema
-from target_postgres.exceptions import TargetError
-from target_postgres.singer_stream import BufferedSingerStream, RAW_LINE_SIZE
-from target_postgres.stream_tracker import StreamTracker
+from singer_target_postgres import json_schema
+from singer_target_postgres.exceptions import TargetError
+from singer_target_postgres.singer_stream import BufferedSingerStream, RAW_LINE_SIZE
+from singer_target_postgres.stream_tracker import StreamTracker
 
 LOGGER = singer.get_logger()
 
@@ -161,12 +161,12 @@ def _line_handler(state_tracker, target, invalid_records_detect, invalid_records
 
 def _send_usage_stats():
     try:
-        version = pkg_resources.get_distribution('target-postgres').version
+        version = pkg_resources.get_distribution('singer-target-postgres').version
         with http.client.HTTPConnection('collector.singer.io', timeout=10).connect() as conn:
             params = {
                 'e': 'se',
                 'aid': 'singer',
-                'se_ca': 'target-postgres',
+                'se_ca': 'singer-target-postgres',
                 'se_ac': 'open',
                 'se_la': version,
             }

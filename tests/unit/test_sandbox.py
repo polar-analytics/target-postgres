@@ -5,7 +5,7 @@ import psycopg2.extras
 import pytest
 
 from utils.fixtures import CONFIG, db_cleanup, ListStream, TEST_DB
-from target_postgres import main
+from singer_target_postgres import main
 
 
 def assert_tables_equal(cursor, expected_table_names):
