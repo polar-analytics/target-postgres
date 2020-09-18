@@ -134,7 +134,7 @@ class PostgresTarget(SQLInterface):
             self._update_schemas_0_to_1(cur)
             self._update_schemas_1_to_2(cur)
 
-    def _create_schema_if_not_exists(self, cur)
+    def _create_schema_if_not_exists(self, cur):
         cur.execute(sql.SQL('''
             CREATE SCHEMA IF NOT EXISTS {}
             '''.format(self.postgres_schema)))
