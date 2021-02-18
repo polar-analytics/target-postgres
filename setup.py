@@ -19,8 +19,8 @@ setup(
     classifiers=['Programming Language :: Python :: 3 :: Only'],
     py_modules=['singer_target_postgres'],
     install_requires=[
-        'arrow==0.15.5',
-        'psycopg2==2.8.6',
+        'arrow>=0.15.5',
+        'psycopg2>=2.8.6',
         'singer-python @ git+https://github.com/polar-analytics/singer-python'
     ],
     setup_requires=[
